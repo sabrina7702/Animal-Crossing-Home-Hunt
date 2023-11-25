@@ -1,0 +1,104 @@
+@import "Nav-Bar-And-Footer.css";
+
+body {
+    margin: 0;
+    color: var(--brown);
+    font-weight: 600;
+}
+
+/*All Paragraphs*/
+p {
+    font-size: 15;
+}
+
+/*Title Style And Layout*/
+.header {
+    padding: 150px 50px 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-img {
+    width: 500px;
+    padding: 0 10em;
+}
+
+.title {
+    font-size: 50px;
+    font-family: 'Muli', sans-serif;
+    line-height: 70px;
+    font-weight: 600;
+}
+
+/*House Card Styles and Grid Layout*/
+.house {
+    background-color: rgb(240, 225, 185);
+    margin: 2em;
+    filter: drop-shadow(0 0 0.1em rgba(0, 0, 0, 0.404));
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .25s ease;
+}
+
+.house:hover {
+    box-shadow: 8px 8px var(--brown);
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 0.1em rgba(80, 72, 72, 0));
+}
+
+/*House Card Image Style and Layout*/
+.card-img > img {
+    width: 100%;
+    aspect-ratio: 13/9;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*House Card Text Style And Layout*/
+.house-title {
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
+.house-body {
+    padding: 0 20px;
+    text-align: justify;
+}
+
+/*House Card Button Style And Layout*/
+.button {
+    padding: 1em;
+}
+
+.detail-button {
+    margin-top: 1em;
+    background-color: var(--brown);
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.detail-button:hover {
+    background-color: #432f28cb;
+}
+
+/*Grid Starts Here*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 25rem);
+    justify-content: center;
+}
+
+/*Resize Screen Layout*/
+@media  screen and (max-width: 1200px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;  
+    }
+}

@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:300,900');
+
+/*Will Apply To All Pages*/
+body {
+    margin: 0 0 100px;
+    background-color: var(--background);
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/*Colour Theme For Website*/
+:root {
+    --background: rgb(212, 175, 120);
+    --green: #7e947e;
+    --brown: #432f28;
+}
+
+/*Nav Header Style*/
+header {
+    background-color: var(--brown);
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    padding: 7px 0;
+    z-index: 1;
+}
+
+/*Nav Logo Style*/
+.logo {
+    max-height: 100px;
+}
+
+ /*Nav Logo Layout*/
+ .nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 0 0 1em;
+    height: 100%;
+    display: flex;
+}
+
+/*To Remove The Checkmark For Nav Bar*/
+ .nav-toggle {
+    display: none;
+}
+
+/*Makes Links Show For Nav Bar*/
+ .nav-toggle:checked ~ nav a {
+     opacity: 1;
+     transition: opacity 125ms ease-in-out 150ms;
+ }
+
+/*Nav Link Style*/
+ nav a {
+     color: white;
+     text-decoration: none;
+     font-size: 20px;
+     text-transform: uppercase;
+     opacity: 0;
+     transition: opacity 150ms ease-in-out;
+ }
+
+ /*Nav Link Hover*/
+ nav a:hover {
+     color: var(--background);
+ }
+
+/*When Small Screen Logo Checked*/
+.nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+ }
+
+ /*Small Screen Nav Bar Style*/
+nav {
+    background: var(--brown);
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    transform: scale(1, 0);
+    transition: transform 200ms ease-in-out;
+    transform-origin: top;
+}
+
+ /*Small Screen Nav Logo Style*/
+ .nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
+    padding: 1.5em;
+    background-image: url(./Pics/navLogo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
+/*Nav List Layout And Style*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*Nav Link Layout*/
+nav li {
+    margin: 0 0 1em 1em;
+}
+
+/*Nav Link Hover Animation*/
+.link-hover {
+    position: relative;
+    transition: .2s;
+}
+
+.link-hover::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+    opacity: 0;
+    background-color: white;
+    transition: .2s;
+}
+
+.link-hover::after {
+    content: '';
+    position: absolute;
+    bottom: 25px;
+    left: 100%;
+    width: 100%;
+    height: 2px;
+    opacity: 0;
+    background-color: white;
+    transition: .2s;
+}
+
+.link-hover:hover::before {
+    opacity: 1;
+    right: 0;
+}
+
+.link-hover:hover::after {
+    opacity: 1;
+    left: 0;
+}
+
+/*Resize Screen Layout (Big Screen)*/
+@media  screen and (min-width: 1200px) {
+    /*Hides Small Screen Nav Bar*/
+    .nav-toggle-label {
+        display: none;
+    }
+
+    /*Nav Bar Content Layout*/
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        margin-bottom: 0;
+    }
+
+    /*Nav Bar List Show*/
+    nav {
+        all: unset;
+        grid-column: 3/4;
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /*Nav Bar List Layout*/
+    nav ul {
+        display: flex;
+    }
+
+    /*Nav Bar Link Layout*/
+    nav li {
+        margin: 0 2em;
+    }
+
+    /*Makes Links Show For Nav Bar*/
+    nav a {
+        opacity: 1;
+    }
+}
+
+/*Footer Section Style And Layout*/
+.foot-content {
+    background-color: #432f28;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5em;
+    padding: 10px;
+    font-size: 17;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/*Text Under Title*/
+span {
+    font-size: 15;
+    font-weight: lighter;
+    line-height: 20px;
+}
+
+/*List Layout*/
+.social-media {
+    list-style: none;
+    display: flex;
+    margin-top: 0;
+}
+
+/*Social Media Image Layout*/
+.social-media img {
+    max-width: 50px;
+    padding: 0 10px;
+    margin-top: 0;
+}

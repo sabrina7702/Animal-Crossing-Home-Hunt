@@ -1,0 +1,104 @@
+@import "Nav-Bar-And-Footer.css";
+
+body {
+    color: var(--brown);
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+
+/*All Headings*/
+h2 {
+    font-size: 30px;
+    font-family: 'Muli', sans-serif;
+    padding: 40px 50px 0;
+    color: white;
+}
+
+/*All Paragraphs*/
+p {
+  line-height: 2em;
+  padding: 0 50px;
+  text-align: justify;
+  font-weight: 600;
+}
+
+/*Nav Bar Spacing*/
+.home-page {
+    padding-top: 7em;
+}
+
+/*Title Picture Layout*/
+.home-page-BG {
+    background-image: url(./Pics/HomePagePic.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 50%;
+    padding-bottom: 0;
+}
+
+/*Introduction Paragraph Layout*/
+.intro {
+    text-align: center;
+    padding: 50px 50px 20px;
+}
+
+/*Find a Home + House Tour Layout*/
+.find-a-home, .house-tour {
+    text-align: left;
+    column-count: 2; 
+    flex-direction: row-reverse;
+    padding-top: 50px;
+}
+ 
+/*Neighbourhood + Contact Layout*/
+.neighbourhood, .contact {
+    text-align: left;
+    column-count: 2; 
+    flex-direction: row;
+    padding-top: 50px;
+}
+
+/*Picture Layouts And Style*/
+.find-home-pic, .hood-pic, .tour-pic, .contact-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    max-height: 500px;
+    filter: drop-shadow(0 0 0.1rem black);
+}
+
+.tour-pic {
+    filter: none;
+}
+
+/*Button Layout And Style*/
+.button {
+    margin-top: 10px;
+    background-color: var(--brown);
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+    border-radius: 3px;
+    padding: 1em;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.295);
+}
+
+.button:hover {
+    background-color: #432f28cb;
+}
+
+/*Resize Screen Layout*/
+@media screen and (max-width: 1200px) {
+    .find-a-home, .house-tour {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .neighbourhood, .contact {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

@@ -1,0 +1,90 @@
+@import "Nav-Bar-And-Footer.css";
+
+body {
+    margin: 0;
+    font-weight: 600;
+}
+
+/*All Header Style*/
+h2 {
+    text-transform: uppercase;
+}
+
+/*Nav Bar Spacing And Page Layout*/
+.contact-page {
+    padding-top: 200px;
+    display: grid;
+    align-items: center;
+}
+
+/*Company Info Style And Layout*/
+.contact-info-section {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Sections Spacing*/
+.contact-info, .fill-in-form, .google-map {
+    padding: 30px;
+}
+
+/*Contact Info Style And BG Image Layout*/
+.contact-info {
+    flex: 30%;
+    background-color: var(--green);
+    background-image: url(./Pics/meContact.png);
+    background-size: contain;
+    background-position: 5cm;
+    background-repeat: no-repeat;
+}
+
+/*Fill In Form Layout*/
+.fill-in-form {
+    flex: 45%;
+    background-color: var(--brown);
+}
+
+form {
+    width: 100%;
+    height: auto;
+}
+
+/*Fill In Form Input Style And Layout*/
+.contact-in-input, .contact-in-textarea, .contact-in-btn{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 0.521);
+}
+
+.contact-in-textarea {
+    height: 140px;
+    padding: 10px;
+}
+
+.contact-in-btn {
+    cursor: pointer;
+}
+
+.contact-in iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/*Google Map layout*/
+.google-map {
+    flex: 25%;
+    padding: 0;
+}
+
+@media screen and (max-width: 800px){
+    .contact-page {
+        display: flex;
+        flex-direction: column;
+    }
+}
